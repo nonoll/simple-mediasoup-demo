@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { API_URL } from '../constants/api';
+import { API_URL } from '../constants';
 
 export const joinNewPeer = async ({ peerId }) => {
   const response = await axios.post(`${API_URL}/joinNewPeer`, { peerId });

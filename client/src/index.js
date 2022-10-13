@@ -2,6 +2,7 @@ import { Device } from 'mediasoup-client';
 import { io } from 'socket.io-client';
 import { sortPeers } from './utils';
 
+import { SOCKET_URL } from './constants';
 import * as apis from './apis';
 
 const win = window;
@@ -142,7 +143,7 @@ async function init(peerId, socket) {
 }
 
 win.addEventListener('DOMContentLoaded', () => {
-  const socket = io('wss://localhost:4443');
+  const socket = io(SOCKET_URL);
   const peerId = Date.now().toString();
 
   socket.on('connect', () => {

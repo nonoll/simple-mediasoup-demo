@@ -2,9 +2,10 @@ const https = require('https');
 const express = require('express');
 const cors = require('cors');
 const socket = require('socket.io');
-const createCertificate = require('./utils/createCertificate');
 const mediasoup = require('mediasoup');
-const mediasoupConfig = require('./constants/mediasoup.constant');
+
+const { createCertificate } = require('./utils');
+const mediasoupConfig = require('./constants');
 
 const API_ROUTE_PREFIX = '/api/v1';
 

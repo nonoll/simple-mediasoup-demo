@@ -66,4 +66,6 @@ function createCertificate(attributes = defaultAttributes) {
   });
 }
 
-module.exports = createCertificate;
+module.exports = {
+  createCertificate
+};
