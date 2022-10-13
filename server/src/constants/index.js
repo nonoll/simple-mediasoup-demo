@@ -54,7 +54,8 @@ const routerOptions = {
 
 const webRtcTransportOptions = {
   listenIps: [
-    { ip: '127.0.0.1', announcedIp: null },
+    { ip: '127.0.0.1', announcedIp: null }, // 자기 자신
+    // { ip: '0.0.0.0', announcedIp: undefined }, // dhcp 서버, 공유기에 요청 > 할당가능한 ip 로 부여됨
   ],
   initialAvailableOutgoingBitrate : 1000000,
   minimumAvailableOutgoingBitrate : 600000,
